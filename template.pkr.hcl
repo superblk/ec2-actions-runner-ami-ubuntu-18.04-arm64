@@ -11,6 +11,10 @@ variable "version" {
   type = string
 }
 
+variable "aws_region" {
+  type = string
+}
+
 source "amazon-ebs" "ubuntu" {
   ami_name        = "github-runner-ubuntu-18.04-arm64-${var.version}"
   ami_description = "GitHub actions self-hosted runner on Ubuntu 18.04 (arm64)" 
