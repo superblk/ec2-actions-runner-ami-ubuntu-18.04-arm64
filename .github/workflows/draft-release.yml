@@ -1,0 +1,17 @@
+name: Draft release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore: 
+      - 'README.md'
+      - '.github/**/*.yml'
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: release-drafter/release-drafter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
