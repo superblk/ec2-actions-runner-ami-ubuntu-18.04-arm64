@@ -1,4 +1,4 @@
-# AMI for self-hosted GitHub actions runner
+# AMI for self-hosted GitHub actions runner (Linux arm64)
 
 ⚠️ This is a new project and is very experimental
 
