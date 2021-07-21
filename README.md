@@ -1,4 +1,4 @@
-# AMI for self-hosted GitHub actions runner (Ubuntu 18.04 on arm64)
+# AMI for self-hosted GitHub actions runner
 
 ⚠️ This is a new project and is very experimental
 
