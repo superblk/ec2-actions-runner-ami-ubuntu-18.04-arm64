@@ -4,10 +4,6 @@
 
 Based on the latest official Ubuntu 18.04 arm64 HVM EBS AMI.
 
-Runner binaries are pre-installed in `/home/ubuntu/actions-runner`.
-
-Passwordless sudo is configured for the `ubuntu` user.
-
 ## Build
 
 We use Hashicorp's [packer](https://www.packer.io/) and GitHub actions to build the AMI, see [workflow](.github/workflows/build-ami.yml).
@@ -15,6 +11,10 @@ We use Hashicorp's [packer](https://www.packer.io/) and GitHub actions to build 
 ## Usage
 
 Currently no public AMI is published. You can fork this repo and build your own.
+
+Runner binaries are pre-installed in `/home/ubuntu/actions-runner`.
+
+Passwordless sudo is configured for the `ubuntu` user.
 
 ## Security
 
