@@ -8,7 +8,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/
 echo 'deb [arch=arm64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu bionic stable' > /etc/apt/sources.list.d/docker.list
 
 apt-get update
-apt-get install -y git docker-ce docker-ce-cli containerd.io openssl libssl-dev pkg-config
+apt-get install -y git docker-ce docker-ce-cli containerd.io openssl libssl-dev pkg-config at
 usermod -aG docker ubuntu
 systemctl enable docker.service
 systemctl enable containerd.service
