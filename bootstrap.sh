@@ -8,7 +8,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/
 echo 'deb [arch=arm64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu bionic stable' > /etc/apt/sources.list.d/docker.list
 
 apt-get update
-apt-get install -y git docker-ce docker-ce-cli containerd.io openssl libssl-dev pkg-config at
+apt-get install -y jq at git docker-ce docker-ce-cli containerd.io openssl libssl-dev pkg-config
 usermod -aG docker ubuntu
 systemctl enable docker.service
 systemctl enable containerd.service
@@ -16,8 +16,8 @@ systemctl enable containerd.service
 cd /home/ubuntu
 mkdir actions-runner && cd actions-runner
 # See https://github.com/actions/runner/releases
-curl -fsSLo actions-runner.tar.gz https://github.com/actions/runner/releases/download/v2.280.3/actions-runner-linux-arm64-2.280.3.tar.gz
-echo "6b838e76a3ee3ead883e1b9b395e2044af473ccf78ed3ae86e94c8801a1b620b actions-runner.tar.gz" | sha256sum -c
+curl -fsSLo actions-runner.tar.gz https://github.com/actions/runner/releases/download/v2.281.1/actions-runner-linux-arm64-2.281.1.tar.gz
+echo "f424d953a4df285839e8bd73474c3f92307a5605e6d473313a130b30550d55bd actions-runner.tar.gz" | sha256sum -c
 tar xzf actions-runner.tar.gz
 rm -f actions-runner.tar.gz
 ./bin/installdependencies.sh
