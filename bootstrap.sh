@@ -16,8 +16,8 @@ systemctl enable containerd.service
 cd /home/ubuntu
 mkdir actions-runner && cd actions-runner
 # See https://github.com/actions/runner/releases
-curl -fsSLo actions-runner.tar.gz https://github.com/actions/runner/releases/download/v2.283.1/actions-runner-linux-arm64-2.283.1.tar.gz
-echo "20c3d1e6ff03b0c5bc73c4ef7710e0048f509b19d5b789e26f468feafddb8eda actions-runner.tar.gz" | sha256sum -c
+curl -fsSLo actions-runner.tar.gz https://github.com/actions/runner/releases/download/v2.283.3/actions-runner-linux-arm64-2.283.3.tar.gz
+echo "b2a0eeffdcd7b731298cf6fdb40e2a69d6c087310e812e8b2e34e643b6d3bfdf actions-runner.tar.gz" | sha256sum -c
 tar xzf actions-runner.tar.gz
 rm -f actions-runner.tar.gz
 ./bin/installdependencies.sh
