@@ -1,7 +1,5 @@
 # AMI for self-hosted GitHub actions runner (Linux arm64)
 
-⚠️ This is a new project and is very experimental
-
 Based on the latest official Ubuntu 18.04 arm64 HVM EBS AMI.
 
 ## Build
