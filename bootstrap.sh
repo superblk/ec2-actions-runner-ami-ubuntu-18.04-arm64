@@ -2,6 +2,10 @@
 
 set -euxo pipefail
 
+# See https://github.com/actions/runner/releases
+RUNNER_VERSION="2.285.1"
+EXPECTED_SHA256="8a0afe1ef136a07908de457f4017edabbce66524d56bd3d92179b3b3d2202917"
+
 apt-get update
 apt-get install -y apt-transport-https ca-certificates curl gnupg
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -15,9 +19,8 @@ systemctl enable containerd.service
 
 cd /home/ubuntu
 mkdir actions-runner && cd actions-runner
-# See https://github.com/actions/runner/releases
-curl -fsSLo actions-runner.tar.gz https://github.com/actions/runner/releases/download/v2.284.0/actions-runner-linux-arm64-2.284.0.tar.gz
-echo "a7a4e31d93d5852710dbacbb5f024be581c337c1be92ba2c729bb81e756bd49b actions-runner.tar.gz" | sha256sum -c
+curl -fsSLo actions-runner.tar.gz https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-arm64-${RUNNER_VERSION}.tar.gz
+echo "$EXPECTED_SHA256 actions-runner.tar.gz" | sha256sum -c
 tar xzf actions-runner.tar.gz
 rm -f actions-runner.tar.gz
 ./bin/installdependencies.sh
