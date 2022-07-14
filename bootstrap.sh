@@ -3,8 +3,8 @@
 set -euxo pipefail
 
 # See https://github.com/actions/runner/releases
-RUNNER_VERSION="2.289.1"
-EXPECTED_SHA256="28e09a31fe35863ef63507494642310eb7cbb9f2ae8c327cfce6962045a106f0"
+RUNNER_VERSION="2.294.0"
+EXPECTED_SHA256="98c34d401105b83906fd988c184b96d1891eaa1b28856020211fee4a9c30bc2b"
 
 apt-get update
 apt-get install -y apt-transport-https ca-certificates curl gnupg
