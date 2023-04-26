@@ -2,6 +2,8 @@
 
 Based on the latest official Ubuntu 18.04 arm64 HVM EBS AMI.
 
+:warning: Deprecated since Ubuntu 18.04 runners are [no longer supported](https://github.blog/changelog/2022-08-09-github-actions-the-ubuntu-18-04-actions-runner-image-is-being-deprecated-and-will-be-removed-by-12-1-22/)
+
 ## Build
 
 We use Hashicorp's [packer](https://www.packer.io/) and GitHub actions to build the AMI, see [workflow](.github/workflows/build-ami.yml).
